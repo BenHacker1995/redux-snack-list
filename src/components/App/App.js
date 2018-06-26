@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { connect } from 'react-redux';
+import Form from '../Form/Form';
 import SnackList from '../SnackList/SnackList';
 const mapReduxStateToProps = ( reduxState ) => ({
   reduxState
@@ -29,8 +30,7 @@ class App extends Component {
     return (
       <div className="App">
         <pre>{ JSON.stringify( this.props.reduxState )}</pre>
-        <input onChange={ this.handleSnackChange } value={ this.state.snack } />
-        <button onClick={ this.addSnack }>Submit Snack</button>
+        <Form addSnack={this.addSnack} handleSnackChange={this.handleSnackChange} />
         <SnackList />
       </div>
     );
