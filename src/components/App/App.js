@@ -29,7 +29,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <pre>{ JSON.stringify( this.props.reduxState )}</pre>
+        {/* <pre>{ JSON.stringify( this.props.reduxState )}</pre> */}
         <Form addSnack={this.addSnack} handleSnackChange={this.handleSnackChange} />
         <SnackList />
       </div>

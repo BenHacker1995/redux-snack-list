@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import SnackItem from '../SnackItem/SnackItem';
 
 const mapReduxStateToProps = ( reduxState ) => ({
     reduxState
@@ -7,12 +8,11 @@ const mapReduxStateToProps = ( reduxState ) => ({
 
   class SnackList extends Component {
     render(){
-    // const SnackList = () => {
         return (
             <div>
                 <ul>
                     { this.props.reduxState.map( snack => {
-                    return <li key={ snack }>{ snack }</li>
+                        return <SnackItem key={ snack } snack={ snack } />
                     })}
                 </ul>
             </div>
